@@ -23,6 +23,7 @@ public class Main {
         nuevo.setEmail("carlos@example.com");
         usuarioDao.create(nuevo);
 
+        // 5. Actualizar el usuario con el método de la clase Usuario
         Usuario nuevoUsuario = new Usuario();
         nuevoUsuario.Actualizardatos("Carla", "juan@notengo.com");
         usuarioDao.create(nuevoUsuario);
