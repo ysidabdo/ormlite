@@ -3,6 +3,8 @@
 # Log file
 *.log
 .vscode/
+mi_base_de_datos.db
+target/
 
 # BlueJ files
 *.ctxt
