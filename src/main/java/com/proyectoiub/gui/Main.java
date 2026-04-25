@@ -113,7 +113,9 @@ public class Main extends javax.swing.JFrame {
                                     .addGap(18, 18, 18)
                                     .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGap(81, 81, 81))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(btnEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -151,6 +153,9 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmpresaActionPerformed
+        EmpresaGui empresaGui = new EmpresaGui();
+        empresaGui.setVisible(true);
+        /*
         try {
             // TODO add your handling code here:
             
@@ -165,10 +170,16 @@ public class Main extends javax.swing.JFrame {
         } catch (Exception ex) {
            JOptionPane.showMessageDialog(rootPane, "Se ha producido una Excepciòn", "Alerta", JOptionPane.ERROR);
         }
+        */
     }//GEN-LAST:event_btnEmpresaActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
- try {
+
+        DepartamentoGui departamentoGui = new DepartamentoGui();
+        departamentoGui.setVisible(true);
+        
+        /*
+        try {
             // TODO add your handling code here:
             
             DatabaseConfig dbConfig = new DatabaseConfig();    
@@ -182,6 +193,7 @@ public class Main extends javax.swing.JFrame {
         } catch (Exception ex) {
            JOptionPane.showMessageDialog(rootPane, "Se ha producido una Excepciòn", "Alerta", JOptionPane.ERROR);
         }        // TODO add your handling code here:
+*/
     }//GEN-LAST:event_jButton11ActionPerformed
 
     /**

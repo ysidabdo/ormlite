@@ -18,10 +18,7 @@ import com.proyectoiub.entidades.Usuario;
  * @author Yesid
  */
 public class Servicios {
-     public static Empresa crearEmpresa(Dao<Empresa, Integer> dao) throws Exception {
-        Empresa empresa = new Empresa();
-        empresa.setNombre("TechCorp");
-        empresa.setSector("Tecnología");
+     public static Empresa crearEmpresa(Dao<Empresa, Integer> dao, Empresa empresa) throws Exception {
         dao.create(empresa);
         return empresa;
     }

@@ -25,14 +25,14 @@ public class Main {
         var organizacionDao = dbConfig.getOrganizacionDao();
 
         // 4. Crear y guardar instancias con relaciones lógicas
-        Empresa empresa = Servicios.crearEmpresa(empresaDao);
-        Departamento departamento = Servicios.crearDepartamento(departamentoDao, empresa);
-        Proyecto proyecto = Servicios.crearProyecto(proyectoDao, empresa, departamento);
-        Organizacion organizacion = Servicios.crearOrganizacion(organizacionDao, empresa);
-        Grupo grupo = Servicios.crearGrupo(grupoDao, departamento);
-        Equipo equipo = Servicios.crearEquipo(equipoDao, grupo);
+        //Empresa empresa = Servicios.crearEmpresa(empresaDao);
+       // Departamento departamento = Servicios.crearDepartamento(departamentoDao, empresa);
+        //Proyecto proyecto = Servicios.crearProyecto(proyectoDao, empresa, departamento);
+       // Organizacion organizacion = Servicios.crearOrganizacion(organizacionDao, empresa);
+        //Grupo grupo = Servicios.crearGrupo(grupoDao, departamento);
+        //Equipo equipo = Servicios.crearEquipo(equipoDao, grupo);
         
-        Servicios.crearUsuario(usuarioDao, empresa, proyecto, departamento, equipo);
+        //Servicios.crearUsuario(usuarioDao, empresa, proyecto, departamento, equipo);
 
         System.out.println("¡Todas las entidades guardadas con éxito!");
         
