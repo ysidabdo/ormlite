@@ -33,11 +33,7 @@ public class Servicios {
         return proyecto;
     }
 
-    public static Departamento crearDepartamento(Dao<Departamento, Integer> dao, Empresa empresa) throws Exception {
-        Departamento departamento = new Departamento();
-        departamento.setNombre("Recursos Humanos");
-        departamento.setUbicacion("Oficina Central");
-        departamento.setEmpresa(empresa);
+    public static Departamento crearDepartamento(Dao<Departamento, Integer> dao, Departamento departamento) throws Exception {
         dao.create(departamento);
         return departamento;
     }

@@ -4,6 +4,7 @@
  */
 package com.proyectoiub.gui;
 
+import com.proyectoiub.entidades.Departamento;
 import com.proyectoiub.entidades.Empresa;
 import com.proyectoiub.infraestructure.DatabaseConfig;
 import com.proyectoiub.servicios.ComboUtils;
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -143,7 +145,26 @@ public class DepartamentoGui extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            DatabaseConfig dbConfig = new DatabaseConfig();
+            var departamentoDao = dbConfig.getDepartamentoDao();
+            var empresaDao = dbConfig.getEmpresaDao();
+            Departamento departamento = new Departamento();
+            departamento.setNombre(txtNombre.getText());
+            departamento.setUbicacion(txtUbicacion.getText());
+            
+            ComboUtils.Item seleccion = (ComboUtils.Item) lstEmpresa.getSelectedItem();    
+            Empresa empresa = empresaDao.queryForId(seleccion.getId());
+            departamento.setEmpresa(empresa);
+            
+            departamentoDao.create(departamento);
+            
+            JOptionPane.showMessageDialog(rootPane, "Empreasa guardadas con éxito!");
+
+            } catch (Exception ex) {
+           JOptionPane.showMessageDialog(rootPane, "Se ha producido una Excepciòn", "Alerta", JOptionPane.ERROR);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
